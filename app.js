@@ -1,4 +1,5 @@
 const path = require("path");
+const app = express();
 
 if (process.env.NODE_ENV === "production") {
 	app.use(express.static("frontend/build"));
@@ -10,7 +11,6 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const express = require("express");
-const app = express();
 const db = require("./config/keys").mongoURI;
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
